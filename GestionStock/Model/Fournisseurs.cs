@@ -101,18 +101,18 @@ namespace GestionStock.Model
 
             string query =
                "UPDATE Fournisseurs SET " +
-                   "NomFournisseur      = " + fournisseur.nomFournisseur + "," +
-                   "NomContact          = " + fournisseur.nomContact + "," +
-                   "TitreContact        = " + fournisseur.titreContact + "," +
-                   "Adresse             = " + fournisseur.adresse + "," +
-                   "Ville               = " + fournisseur.ville + "," +
-                   "CodePostal          = " + fournisseur.codePostal + "," +
-                   "Departement         = " + fournisseur.departement + "," +
-                   "Pays_Region         = " + fournisseur.pays_Region + "," +
-                   "Telephone           = " + fournisseur.telephone + "," +
-                   "ConditionPaiement   = " + fournisseur.conditionPaiement + "," +
-                   "Email               = " + fournisseur.email + "," +
-                   "Remarques           = " + fournisseur.remarques + "";
+                   "NomFournisseur      = '" + fournisseur.nomFournisseur + "'," +
+                   "NomContact          = '" + fournisseur.nomContact + "'," +
+                   "TitreContact        = '" + fournisseur.titreContact + "'," +
+                   "Adresse             = '" + fournisseur.adresse + "'," +
+                   "Ville               = '" + fournisseur.ville + "'," +
+                   "CodePostal          = '" + fournisseur.codePostal + "'," +
+                   "Departement         = '" + fournisseur.departement + "'," +
+                   "Pays_Region         = '" + fournisseur.pays_Region + "'," +
+                   "Telephone           = '" + fournisseur.telephone + "'," +
+                   "ConditionPaiement   = '" + fournisseur.conditionPaiement + "'," +
+                   "Email               = '" + fournisseur.email + "'," +
+                   "Remarques           = '" + fournisseur.remarques + "'";
 
             DatabaseContext.Exec(query);
 
@@ -121,7 +121,7 @@ namespace GestionStock.Model
 
         public int Delete(int id)
         {
-            string query = "DELETE FROM Fournisseurs * WHERE RefFournisseur = " + id;
+            string query = "DELETE FROM Fournisseurs * WHERE RefFournisseur = " + id + "'";
 
             return DatabaseContext.Exec(query);
         }
@@ -130,7 +130,7 @@ namespace GestionStock.Model
         {
             Fournisseurs fournisseur = new Fournisseurs();
 
-            string query = "SELECT * FROM Fournisseurs WHERE RefFournisseur = " + reference;
+            string query = "SELECT * FROM Fournisseurs WHERE RefFournisseur = " + reference + "'";
 
             SqlDataReader result = DatabaseContext.ExecWithResult(query);
 

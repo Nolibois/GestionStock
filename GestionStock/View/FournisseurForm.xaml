@@ -50,22 +50,23 @@
         <Label x:Name="label_Email" Content="email" Margin="55,345,0,64" Height="25" HorizontalAlignment="Left"/>
         <Label x:Name="label_Remarques" Content="Remarques" Margin="52,388,0,21" Height="25" HorizontalAlignment="Left"/>
         <TextBox x:Name="remarques" TextWrapping="Wrap" Margin="142,388,0,21" Height="25" HorizontalAlignment="Left" Width="198"/>
-        <Button x:Name="btn_ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="407,377,0,0" VerticalAlignment="Top" Background="#FF97C4ED" Width="56" Padding="3,3,3,3" Click="ajouter_Click" ContextMenuClosing="btn_ajouter_ContextMenuClosing">
+        <GroupBox Header="Choix des commandes" Margin="376,354,0,0"/>
+        <Button x:Name="btn_ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="407,389,0,0" VerticalAlignment="Top" Background="#FF97C4ED" Width="56" Padding="3,3,3,3" Click="ajouter_Click" ContextMenuClosing="btn_ajouter_ContextMenuClosing">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_modifier" Content="Modifier" HorizontalAlignment="Left" Margin="498,377,0,0" VerticalAlignment="Top" Background="#FFDEC173" Width="64" Padding="3,3,3,3">
+        <Button x:Name="btn_modifier" Content="Modifier" HorizontalAlignment="Left" Margin="498,389,0,0" VerticalAlignment="Top" Background="#FFDEC173" Width="64" Padding="3,3,3,3">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="599,377,0,0" VerticalAlignment="Top" Background="#FFFB7148" Width="78" Padding="3,3,3,3">
+        <Button x:Name="btn_supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="599,389,0,0" VerticalAlignment="Top" Background="#FFFB7148" Width="78" Padding="3,3,3,3">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_annuler" Content="Annuler" HorizontalAlignment="Left" Margin="695,377,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="59" Padding="3,3,3,3">
+        <Button x:Name="btn_annuler" Content="Annuler" HorizontalAlignment="Left" Margin="695,389,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="59" Padding="3,3,3,3">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

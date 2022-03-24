@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GestionStock.View;
 
 namespace GestionStock
 {
@@ -23,6 +24,7 @@ namespace GestionStock
         public MainWindow()
         {
             InitializeComponent();
+            new FournisseurForm().Show();
         }
     }
 }

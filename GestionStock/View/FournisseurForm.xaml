@@ -44,8 +44,6 @@
         <Label x:Name="label_Pays_Region" Content="PaysRegion" Margin="192,241,0,168" Height="25" HorizontalAlignment="Left"/>
         <TextBox x:Name="telephone" TextWrapping="Wrap" Margin="104,280,0,129" Height="25" HorizontalAlignment="Left" Width="77"/>
         <Label x:Name="label_Tel" Content="Tel&#xA;" Margin="55,280,0,129" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="fax" TextWrapping="Wrap" Margin="264,280,0,129" Height="25" HorizontalAlignment="Left" Width="76"/>
-        <Label x:Name="label_fax" Content="Fax&#xA;" Margin="192,280,0,129" Height="25" HorizontalAlignment="Left"/>
         <TextBox x:Name="paiement" TextWrapping="Wrap" Margin="187,310,0,99" Height="25" HorizontalAlignment="Left" Width="153"/>
         <Label x:Name="label_Paiement" Content="Cond Paiement" Margin="55,310,0,99" Height="25" HorizontalAlignment="Left"/>
         <TextBox x:Name="email" TextWrapping="Wrap" Margin="187,345,0,64" Height="25" HorizontalAlignment="Left" Width="153"/>

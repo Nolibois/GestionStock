@@ -34,7 +34,7 @@ namespace GestionStock.Model
 
         public static int Exec(string query)
         {
-            SqlCommand cmd = new SqlCommand(query, _instance);
+            SqlCommand cmd = new SqlCommand(query, GetInstance());
             _instance.Open();
 
             // Lors d'une modification ou d'une création ou d'une suppression, le ExecuteNonQuery() retourne la quantité de lignes modifiées.
@@ -47,7 +47,7 @@ namespace GestionStock.Model
 
         public static SqlDataReader ExecWithResult(string query)
         {
-            SqlCommand cmd = new SqlCommand(query, _instance);
+            SqlCommand cmd = new SqlCommand(query, GetInstance());
             _instance.Open();
 
             // ExecuteReader() => Retourne le résultat de la requête dans un tableau.

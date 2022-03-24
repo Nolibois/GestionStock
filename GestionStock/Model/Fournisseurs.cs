@@ -20,7 +20,6 @@ namespace GestionStock.Model
         public int departement{ get; set; }
         public string pays_Region{ get; set; }
         public string telephone{ get; set; }
-        public string fax{ get; set; }
         public int conditionPaiement{ get; set; }
         public string email{ get; set; }
         public string remarques{ get; set; }
@@ -35,12 +34,10 @@ namespace GestionStock.Model
             int departement,
             string pays_Region,
             string telephone,
-            string fax,
             int conditionPaiement,
             string email,
             string remarques)
         {
-            this.refFournisseur = refFournisseur;
             this.nomFournisseur = nomFournisseur;
             this.nomContact = nomContact;
             this.titreContact = titreContact;
@@ -50,11 +47,12 @@ namespace GestionStock.Model
             this.departement = departement;
             this.pays_Region = pays_Region;
             this.telephone = telephone;
-            this.fax = fax;
             this.conditionPaiement = conditionPaiement;
             this.email = email;
             this.remarques = remarques;
         }
+
+        public Fournisseurs() { }
 
         public int size()
         {
@@ -73,29 +71,27 @@ namespace GestionStock.Model
                     "Adresse," +
                     "Ville,"+
                     "CodePostal," +
-                    "Departement," +
-                    "Pays_Region," +
-                    "Telephone," +
-                    "Fax," +
-                    "ConditionPaiement," +
-                    "Email," +
+                    "DepartementOuRegion," +
+                    "Pays," +
+                    "NumeroTel," +
+                    "ConditionsPaiements," +
+                    "AdresseEmail," +
                     "Remarques) " +
-                "VALUES(" + 
-                    fournisseur.nomFournisseur + ", " + 
-                    fournisseur.nomContact + ", " + 
-                    fournisseur.titreContact + ", " + 
-                    fournisseur.adresse + ", " + 
-                    fournisseur.ville + ", " + 
-                    fournisseur.codePostal + ", " + 
-                    fournisseur.departement + ", " +
-                    fournisseur.pays_Region + ", " + 
-                    fournisseur.telephone + ", " + 
-                    fournisseur.fax + ", " + 
-                    fournisseur.conditionPaiement + ", " + 
-                    fournisseur.email + ", " + 
-                    fournisseur.remarques + ")";
+                "VALUES('" + 
+                    fournisseur.nomFournisseur + "', '" + 
+                    fournisseur.nomContact + "', '" + 
+                    fournisseur.titreContact + "', '" + 
+                    fournisseur.adresse + "', '" + 
+                    fournisseur.ville + "', '" + 
+                    fournisseur.codePostal + "', '" + 
+                    fournisseur.departement + "', '" +
+                    fournisseur.pays_Region + "', '" + 
+                    fournisseur.telephone + "', '" + 
+                    fournisseur.conditionPaiement + "', '" + 
+                    fournisseur.email + "', '" + 
+                    fournisseur.remarques + "')";
 
-            DatabaseContext.ExecWithResult(query);
+            DatabaseContext.Exec(query);
 
             return fournisseur;
         }
@@ -114,12 +110,11 @@ namespace GestionStock.Model
                    "Departement         = " + fournisseur.departement + "," +
                    "Pays_Region         = " + fournisseur.pays_Region + "," +
                    "Telephone           = " + fournisseur.telephone + "," +
-                   "Fax                 = " + fournisseur.fax + "," +
                    "ConditionPaiement   = " + fournisseur.conditionPaiement + "," +
                    "Email               = " + fournisseur.email + "," +
                    "Remarques           = " + fournisseur.remarques + "";
 
-            DatabaseContext.ExecWithResult(query);
+            DatabaseContext.Exec(query);
 
             return fournisseur;
         }
@@ -151,7 +146,6 @@ namespace GestionStock.Model
                 fournisseur.departement         = result.GetInt32(7);
                 fournisseur.pays_Region         = result.GetString(8);
                 fournisseur.telephone           = result.GetString(9);
-                fournisseur.fax                 = result.GetString(10);
                 fournisseur.conditionPaiement   = result.GetInt32(11);
                 fournisseur.email               = result.GetString(12);
                 fournisseur.remarques           = result.GetString(13);
@@ -174,20 +168,19 @@ namespace GestionStock.Model
                 {
                     Fournisseurs fournisseur = new Fournisseurs();
 
-                    fournisseur.refFournisseur = (int)results["RefFournisseur"];
-                    fournisseur.nomFournisseur = (string)results["NomFournisseur"];
-                    fournisseur.nomContact = (string)results["NomContact"];
-                    fournisseur.titreContact = (string)results["TitreContact"];
-                    fournisseur.adresse = (string)results["adresse"];
-                    fournisseur.ville = (string)results["ville"];
-                    fournisseur.codePostal = (int)results["codePostal"];
-                    fournisseur.departement = (int)results["DepartementOuRegion"];
-                    fournisseur.pays_Region = (string)results["Pays_Region"];
-                    fournisseur.telephone = (string)results["Telephone"];
-                    fournisseur.fax = (string)results["Fax"];
-                    fournisseur.conditionPaiement = (int)results["ConditionsPaiements"];
-                    fournisseur.email = (string)results["AdresseEmail"];
-                    fournisseur.remarques = (string)results["Remarques"];
+                    fournisseur.refFournisseur      = (int)results["RefFournisseur"];
+                    fournisseur.nomFournisseur      = (string)results["NomFournisseur"];
+                    fournisseur.nomContact          = (string)results["NomContact"];
+                    fournisseur.titreContact        = (string)results["TitreContact"];
+                    fournisseur.adresse             = (string)results["adresse"];
+                    fournisseur.ville               = (string)results["ville"];
+                    fournisseur.codePostal          = (int)results["codePostal"];
+                    fournisseur.departement         = (int)results["DepartementOuRegion"];
+                    fournisseur.pays_Region         = (string)results["Pays_Region"];
+                    fournisseur.telephone           = (string)results["Telephone"];
+                    fournisseur.conditionPaiement   = (int)results["ConditionsPaiements"];
+                    fournisseur.email               = (string)results["AdresseEmail"];
+                    fournisseur.remarques           = (string)results["Remarques"];
 
                     list.Add(fournisseur);
                 }

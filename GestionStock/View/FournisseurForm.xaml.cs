@@ -39,7 +39,6 @@ namespace GestionStock.View
                 Int32.Parse(dept.Text),
                 pays_region.Text,
                 telephone.Text,
-                fax.Text,
                 Int32.Parse(paiement.Text),
                 email.Text,
                 remarques.Text);

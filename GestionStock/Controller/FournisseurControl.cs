@@ -9,14 +9,14 @@ namespace GestionStock.Controller
 {
     internal class FournisseurControl
     {
-        public void Show()
+        public List<Fournisseurs> Show()
         {
-
+            return new Fournisseurs().ShowAll();
         }
 
         public Fournisseurs ShowById(int id)
         {
-            return new Fournisseurs();
+            return new Fournisseurs().ShowById(id);
         }
 
         public Fournisseurs Search(string condition)

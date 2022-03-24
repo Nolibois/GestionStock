@@ -8,22 +8,22 @@
         Title="FournisseurForm" Height="450" Width="800">
     <Grid>
 
-        <GroupBox Header="Formulaire Fournisseur" Margin="24,10,429,10"/>
-        <TextBox x:Name="nomFournisseur" TextWrapping="Wrap" Margin="187,41,0,368" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_NomFourn" Content="Nom du Fournisseur" Margin="55,40,0,369" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="nomContact" TextWrapping="Wrap" Margin="187,80,0,329" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_NomContact" Content="Nom du Contact" Margin="55,80,0,329" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="titreContact" TextWrapping="Wrap" Margin="187,120,0,289" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_TitreContact" Content="Titre du contact" Margin="55,119,0,290" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="adresse" TextWrapping="Wrap" Margin="187,162,0,247" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_adresse" Content="Adresse" Margin="55,162,0,247" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="ville" TextWrapping="Wrap" Margin="104,202,0,207" Height="25" HorizontalAlignment="Left" Width="77"/>
-        <Label x:Name="label_Ville" Content="Ville" Margin="55,202,0,207" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="codePostal" TextWrapping="Wrap" Margin="269,202,0,207" Height="25" HorizontalAlignment="Left" Width="71"/>
-        <Label x:Name="label_Code_Postal" Content="Code Postal" Margin="191,202,0,207" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="dept" TextWrapping="Wrap" Margin="104,241,0,168" Height="25" HorizontalAlignment="Left" Width="77"/>
-        <Label x:Name="label_Code_Postal_Copy" Content="Départ&#xD;&#xA;" Margin="55,241,0,168" Height="25" HorizontalAlignment="Left"/>
-        <Grid x:Name="Tableau" Margin="400,44,46,85">
+        <GroupBox Header="Formulaire Fournisseur" Margin="36,19,442,31"/>
+        <TextBox x:Name="nomFournisseur" TextWrapping="Wrap" Margin="187,48,0,363" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_NomFourn" Content="Nom du Fournisseur" Margin="65,47,0,364" HorizontalAlignment="Left" Width="109"/>
+        <TextBox x:Name="nomContact" TextWrapping="Wrap" Margin="187,84,0,327" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_NomContact" Content="Nom du Contact" Margin="65,84,0,327" HorizontalAlignment="Left" Width="91"/>
+        <TextBox x:Name="titreContact" TextWrapping="Wrap" Margin="187,121,0,290" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_TitreContact" Content="Titre du contact" Margin="65,120,0,291" HorizontalAlignment="Left" Width="87"/>
+        <TextBox x:Name="adresse" TextWrapping="Wrap" Margin="187,160,0,251" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_adresse" Content="Adresse" Margin="65,160,0,251" HorizontalAlignment="Left" Width="48"/>
+        <TextBox x:Name="ville" TextWrapping="Wrap" Margin="110,197,0,214" HorizontalAlignment="Left" Width="72"/>
+        <Label x:Name="label_Ville" Content="Ville" Margin="65,197,0,214" HorizontalAlignment="Left" Width="30"/>
+        <TextBox x:Name="codePostal" TextWrapping="Wrap" Margin="264,197,0,214" HorizontalAlignment="Left" Width="66"/>
+        <Label x:Name="label_Code_Postal" Content="Code Postal" Margin="191,197,0,214" HorizontalAlignment="Left" Width="68"/>
+        <TextBox x:Name="dept" TextWrapping="Wrap" Margin="110,233,0,178" HorizontalAlignment="Left" Width="72"/>
+        <Label x:Name="label_Code_Postal_Copy" Content="Départ&#xD;&#xA;" Margin="65,233,0,178" HorizontalAlignment="Left" Width="43"/>
+        <Grid x:Name="Tableau" Margin="385,51,86,101">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="Fournisseur"/>
                 <ColumnDefinition x:Name="Contact"/>
@@ -40,37 +40,38 @@
                 <ColumnDefinition x:Name="remarques_contact"/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <TextBox x:Name="pays_region" TextWrapping="Wrap" Margin="269,241,0,168" Height="25" HorizontalAlignment="Left" Width="71"/>
-        <Label x:Name="label_Pays_Region" Content="PaysRegion" Margin="192,241,0,168" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="telephone" TextWrapping="Wrap" Margin="104,280,0,129" Height="25" HorizontalAlignment="Left" Width="77"/>
-        <Label x:Name="label_Tel" Content="Tel&#xA;" Margin="55,280,0,129" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="paiement" TextWrapping="Wrap" Margin="187,310,0,99" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_Paiement" Content="Cond Paiement" Margin="55,310,0,99" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="email" TextWrapping="Wrap" Margin="187,345,0,64" Height="25" HorizontalAlignment="Left" Width="153"/>
-        <Label x:Name="label_Email" Content="email" Margin="55,345,0,64" Height="25" HorizontalAlignment="Left"/>
-        <Label x:Name="label_Remarques" Content="Remarques" Margin="52,388,0,21" Height="25" HorizontalAlignment="Left"/>
-        <TextBox x:Name="remarques" TextWrapping="Wrap" Margin="142,388,0,21" Height="25" HorizontalAlignment="Left" Width="198"/>
-        <GroupBox Header="Choix des commandes" Margin="376,354,0,0"/>
-        <Button x:Name="btn_ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="407,389,0,0" VerticalAlignment="Top" Background="#FF97C4ED" Width="56" Padding="3,3,3,3" Click="ajouter_Click" ContextMenuClosing="btn_ajouter_ContextMenuClosing">
+        <TextBox x:Name="pays_region" TextWrapping="Wrap" Margin="264,233,0,178" HorizontalAlignment="Left" Width="66"/>
+        <Label x:Name="label_Pays_Region" Content="PaysRegion" Margin="192,233,0,178" HorizontalAlignment="Left" Width="65"/>
+        <TextBox x:Name="telephone" TextWrapping="Wrap" Margin="110,269,0,142" HorizontalAlignment="Left" Width="72"/>
+        <Label x:Name="label_Tel" Content="Tel&#xA;" Margin="65,269,0,142" HorizontalAlignment="Left" Width="22"/>
+        <TextBox x:Name="paiement" TextWrapping="Wrap" Margin="187,297,0,114" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_Paiement" Content="Cond Paiement" Margin="65,297,0,114" HorizontalAlignment="Left" Width="84"/>
+        <TextBox x:Name="email" TextWrapping="Wrap" Margin="187,329,0,81" HorizontalAlignment="Left" Width="143"/>
+        <Label x:Name="label_Email" Content="email" Margin="65,329,0,81" HorizontalAlignment="Left" Width="36"/>
+        <Label x:Name="label_Remarques" Content="Remarques" Margin="62,369,0,42" HorizontalAlignment="Left" Width="64"/>
+        <TextBox x:Name="remarques" TextWrapping="Wrap" Margin="146,369,0,42" HorizontalAlignment="Left" Width="184"/>
+        <GroupBox Header="Choix des commandes" Margin="363,338,43,22"/>
+        <Button x:Name="btn_ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="403,364,0,0" VerticalAlignment="Top" Background="#FF97C4ED" Width="52" Padding="3,3,3,3" Click="ajouter_Click" ContextMenuClosing="btn_ajouter_ContextMenuClosing" Height="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_modifier" Content="Modifier" HorizontalAlignment="Left" Margin="498,389,0,0" VerticalAlignment="Top" Background="#FFDEC173" Width="64" Padding="3,3,3,3">
+        <Button x:Name="btn_modifier" Content="Modifier" HorizontalAlignment="Left" Margin="488,364,0,0" VerticalAlignment="Top" Background="#FFDEC173" Width="59" Padding="3,3,3,3" Height="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="599,389,0,0" VerticalAlignment="Top" Background="#FFFB7148" Width="78" Padding="3,3,3,3">
+        <Button x:Name="btn_supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="581,364,0,0" VerticalAlignment="Top" Background="#FFFB7148" Width="73" Padding="3,3,3,3" Height="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_annuler" Content="Annuler" HorizontalAlignment="Left" Margin="695,389,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="59" Padding="3,3,3,3">
+        <Button x:Name="btn_annuler" Content="Annuler" HorizontalAlignment="Left" Margin="671,364,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="54" Padding="3,3,3,3" Height="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="856,121,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

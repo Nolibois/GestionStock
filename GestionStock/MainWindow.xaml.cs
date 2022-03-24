@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GestionStock.View;
+using GestionStock.Model;
+using GestionStock.Controller;
 
 namespace GestionStock
 {
@@ -25,6 +27,9 @@ namespace GestionStock
         {
             InitializeComponent();
             new FournisseurForm().Show();
+
+            FournisseurControl controller = new FournisseurControl();
+            List<Fournisseurs>  fournisseurs = controller.Show();
         }
     }
 }

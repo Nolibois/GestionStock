@@ -28,8 +28,6 @@ namespace GestionStock
             InitializeComponent();
             new FournisseurForm().Show();
 
-            FournisseurControl controller = new FournisseurControl();
-            List<Fournisseurs>  fournisseurs = controller.Show();
         }
     }
 }

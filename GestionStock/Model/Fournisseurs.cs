@@ -176,8 +176,8 @@ namespace GestionStock.Model
                     fournisseur.ville               = (string)results["ville"];
                     fournisseur.codePostal          = (int)results["codePostal"];
                     fournisseur.departement         = (int)results["DepartementOuRegion"];
-                    fournisseur.pays_Region         = (string)results["Pays_Region"];
-                    fournisseur.telephone           = (string)results["Telephone"];
+                    fournisseur.pays_Region         = (string)results["Pays"];
+                    fournisseur.telephone           = (string)results["NumeroTel"];
                     fournisseur.conditionPaiement   = (int)results["ConditionsPaiements"];
                     fournisseur.email               = (string)results["AdresseEmail"];
                     fournisseur.remarques           = (string)results["Remarques"];
@@ -185,7 +185,7 @@ namespace GestionStock.Model
                     list.Add(fournisseur);
                 }
             }
-
+            DatabaseContext.CloseInst();
             return list;
         }
 

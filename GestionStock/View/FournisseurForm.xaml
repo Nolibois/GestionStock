@@ -1,9 +1,10 @@
-﻿<Window x:Class="GestionStock.View.FournisseurForm"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestionStock.View"
+        xmlns:Model="clr-namespace:GestionStock.Model" x:Class="GestionStock.View.FournisseurForm"
         mc:Ignorable="d"
         Title="FournisseurForm" Height="450" Width="800">
     <Grid>
@@ -22,24 +23,7 @@
         <TextBox x:Name="codePostal" TextWrapping="Wrap" Margin="264,197,0,214" HorizontalAlignment="Left" Width="66"/>
         <Label x:Name="label_Code_Postal" Content="Code Postal" Margin="191,197,0,214" HorizontalAlignment="Left" Width="68"/>
         <TextBox x:Name="dept" TextWrapping="Wrap" Margin="110,233,0,178" HorizontalAlignment="Left" Width="72"/>
-        <Label x:Name="label_Code_Postal_Copy" Content="Départ&#xD;&#xA;" Margin="65,233,0,178" HorizontalAlignment="Left" Width="43"/>
-        <Grid x:Name="Tableau" Margin="385,51,86,101">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="Fournisseur"/>
-                <ColumnDefinition x:Name="Contact"/>
-                <ColumnDefinition x:Name="titre_contact"/>
-                <ColumnDefinition x:Name="adresse_contact"/>
-                <ColumnDefinition x:Name="ville_contact"/>
-                <ColumnDefinition x:Name="code_Postal"/>
-                <ColumnDefinition x:Name="departement_contact"/>
-                <ColumnDefinition x:Name="Pays_Region"/>
-                <ColumnDefinition x:Name="tel"/>
-                <ColumnDefinition x:Name="fax_contact"/>
-                <ColumnDefinition x:Name="condition_paiement"/>
-                <ColumnDefinition x:Name="email_contact"/>
-                <ColumnDefinition x:Name="remarques_contact"/>
-            </Grid.ColumnDefinitions>
-        </Grid>
+        <Label x:Name="label_Code_Postal_Copy" Content="Départ&#xA;" Margin="65,233,0,178" HorizontalAlignment="Left" Width="43"/>
         <TextBox x:Name="pays_region" TextWrapping="Wrap" Margin="264,233,0,178" HorizontalAlignment="Left" Width="66"/>
         <Label x:Name="label_Pays_Region" Content="PaysRegion" Margin="192,233,0,178" HorizontalAlignment="Left" Width="65"/>
         <TextBox x:Name="telephone" TextWrapping="Wrap" Margin="110,269,0,142" HorizontalAlignment="Left" Width="72"/>
@@ -72,6 +56,11 @@
             </Button.Effect>
         </Button>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="856,121,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="358,41,0,240">
+            <DataGrid.DataContext>
+                <Model:Fournisseurs/>
+            </DataGrid.DataContext>
+        </DataGrid>
 
 
     </Grid>

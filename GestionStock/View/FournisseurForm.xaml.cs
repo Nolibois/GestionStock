@@ -24,6 +24,8 @@ namespace GestionStock.View
         public FournisseurForm()
         {
             InitializeComponent();
+            FournisseurControl controller = new FournisseurControl();
+            grid.ItemsSource = controller.Show();
         }
 
 

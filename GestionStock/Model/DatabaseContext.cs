@@ -39,7 +39,7 @@ namespace GestionStock.Model
 
             // Lors d'une modification ou d'une création ou d'une suppression, le ExecuteNonQuery() retourne la quantité de lignes modifiées.
             int ret = cmd.ExecuteNonQuery();
-
+            _instance.Close();
             return ret;
 
         }
@@ -58,7 +58,10 @@ namespace GestionStock.Model
         public static void CloseInst()
         {
             if (_instance != null)
+            {
                 _instance.Close();
+
+            }
         }
     }
 }

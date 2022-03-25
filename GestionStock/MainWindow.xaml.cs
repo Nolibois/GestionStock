@@ -26,8 +26,27 @@ namespace GestionStock
         public MainWindow()
         {
             InitializeComponent();
-            new FournisseurForm().Show();
 
+        }
+
+        /// <summary>
+        /// Bouton Link vers fenêtre AnneeExercice
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new AnneeExerciceForm().Show();
+        }
+
+        /// <summary>
+        /// Bouton Link vers fenêtre FournisseurForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new FournisseurForm().Show();
         }
     }
 }

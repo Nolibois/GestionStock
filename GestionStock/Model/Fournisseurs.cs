@@ -185,6 +185,7 @@ namespace GestionStock.Model
                     list.Add(fournisseur);
                 }
             }
+
             DatabaseContext.CloseInst();
             return list;
         }

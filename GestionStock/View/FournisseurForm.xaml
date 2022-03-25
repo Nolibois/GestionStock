@@ -56,7 +56,7 @@
             </Button.Effect>
         </Button>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="856,121,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="358,41,0,240">
+        <DataGrid x:Name="grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="358,41,0,240" Initialized="grid_Initialized">
             <DataGrid.DataContext>
                 <Model:Fournisseurs/>
             </DataGrid.DataContext>

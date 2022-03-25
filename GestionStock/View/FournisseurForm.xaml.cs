@@ -21,11 +21,13 @@ namespace GestionStock.View
     /// </summary>
     public partial class FournisseurForm : Window
     {
+        private FournisseurControl controller;
+
         public FournisseurForm()
         {
             InitializeComponent();
-            FournisseurControl controller = new FournisseurControl();
-            grid.ItemsSource = controller.Show();
+            controller = new FournisseurControl();
+            grid_Init();
         }
 
 
@@ -44,12 +46,25 @@ namespace GestionStock.View
                 Int32.Parse(paiement.Text),
                 email.Text,
                 remarques.Text);
-            new FournisseurControl().Ajouter(fournisseur);
+
+           controller.Ajouter(fournisseur);
+
+            grid_Initialized(sender, e);
         }
 
         private void btn_ajouter_ContextMenuClosing(object sender, ContextMenuEventArgs e)
         {
 
+        }
+
+        private void grid_Initialized(object sender, EventArgs e)
+        {
+            grid_Init();
+        }
+
+        private void grid_Init() {
+            FournisseurControl controller = new FournisseurControl();
+            grid.ItemsSource = controller.Show();
         }
     }
 }

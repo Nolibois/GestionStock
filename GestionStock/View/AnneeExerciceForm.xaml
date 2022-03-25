@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="AnneeExerciceForm" Height="450" Width="800">
     <Grid>
-        <GroupBox HorizontalAlignment="Left" Height="120" Header="Année de l'exercice" Margin="264,102,0,0" VerticalAlignment="Top" Width="256"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="21" Margin="292,151,0,0" VerticalAlignment="Top" Width="103"/>
-        <DatePicker HorizontalAlignment="Left" Height="21" Margin="400,151,0,0" VerticalAlignment="Top" Width="89"/>
+        <GroupBox HorizontalAlignment="Left" Height="120" Header="Année de l'exercice" Margin="56,83,0,0" VerticalAlignment="Top" Width="281"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="21" Margin="84,132,0,0" VerticalAlignment="Top" Width="103"/>
+        <DatePicker x:Name="aeDate" HorizontalAlignment="Left" Height="21" Margin="192,132,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="gridAE" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,61,60,217"/>
+        <Button x:Name="btn_Click_1" Content="Ajouter" HorizontalAlignment="Left" Margin="69,304,0,0" VerticalAlignment="Top" Click="addbtn_Click_1"/>
+        <Button x:Name="CancelBtn_Click" Content="Annuler" HorizontalAlignment="Left" Margin="292,304,0,0" VerticalAlignment="Top" Click="AeCancelBtn_Click"/>
+        <Button x:Name="DeleteBtn_Click" Content="Effacer" HorizontalAlignment="Left" Margin="232,304,0,0" VerticalAlignment="Top" Click="AeDeleteBtn_Click"/>
+        <Button x:Name="updateBtn_Click" Content="Modifier" HorizontalAlignment="Left" Margin="157,304,0,0" VerticalAlignment="Top" Click="AeUpdateBtn_Click"/>
 
     </Grid>
 </Window>

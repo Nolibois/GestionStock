@@ -10,6 +10,5 @@ namespace GestionStock.Model
     {
         private int refCategorie{ get; }
         public string nomCategorie{ get; set; }
-        public AnneeExercice anneeExercice { get; set; }
     }
 }

@@ -38,23 +38,23 @@ namespace GestionStock.Model
             string email,
             string remarques)
         {
-            this.nomFournisseur = nomFournisseur;
-            this.nomContact = nomContact;
-            this.titreContact = titreContact;
-            this.adresse = adresse;
-            this.ville = ville;
-            this.codePostal = codePostal;
-            this.departement = departement;
-            this.pays_Region = pays_Region;
-            this.telephone = telephone;
-            this.conditionPaiement = conditionPaiement;
-            this.email = email;
-            this.remarques = remarques;
+            this.nomFournisseur     = nomFournisseur;
+            this.nomContact         = nomContact;
+            this.titreContact       = titreContact;
+            this.adresse            = adresse;
+            this.ville              = ville;
+            this.codePostal         = codePostal;
+            this.departement        = departement;
+            this.pays_Region        = pays_Region;
+            this.telephone          = telephone;
+            this.conditionPaiement  = conditionPaiement;
+            this.email              = email;
+            this.remarques          = remarques;
         }
 
         public Fournisseurs() { }
 
-        public int size()
+        public int Size()
         {
             string query = "SELECT COUNT(*) FROM Fournisseurs";
             return DatabaseContext.Exec(query);

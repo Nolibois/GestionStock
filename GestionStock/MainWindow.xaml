@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Menu Margin="200,103,200,136">
-            <Button Content="linkAnneeExercice" Click="Button_Click"/>
-            <Button Content="linkFournisseur" Click="Button_Click_1"/>
-        </Menu>
+        <GroupBox HorizontalAlignment="Left" Height="138" Header="Menu" Margin="214,0,0,0" VerticalAlignment="Center" Width="379" BorderBrush="#FF39A7EA" Background="#FFEAD8FD"/>
+        <Grid Margin="286,0,0,0" MinWidth="0" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="228">
+            <Button Content="Annee d'Exercice" Click="Button_Click" Padding="4,3,4,3" Margin="0,0,127,0" BorderBrush="#FF5C3C7D" Background="#FFF9F7FB"/>
+            <Button x:Name="btn_Link_Frs" Content="Fournisseurs" Click="Button_Click_1" VerticalContentAlignment="Center" Padding="4,3,4,3" Margin="151,0,0,0" Background="#FFF9F7FB" BorderBrush="#FF5C3C7D"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="214,55,0,0" TextWrapping="Wrap" Text="Gestion de Stock" VerticalAlignment="Top" Width="379" FontSize="24" FontWeight="Bold" Padding="0,0,0,3"/>
     </Grid>
 </Window>

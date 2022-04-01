@@ -29,7 +29,7 @@ namespace GestionStock.Controller
             return fournisseur.Insert(fournisseur);
         }
         
-        public Fournisseurs Edit(Fournisseurs fournisseur)
+        public Fournisseurs Update(Fournisseurs fournisseur)
         {
             return fournisseur.Edit(fournisseur);
         }

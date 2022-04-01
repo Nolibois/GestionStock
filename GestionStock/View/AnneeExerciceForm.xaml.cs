@@ -55,7 +55,8 @@ namespace GestionStock.View
 
         private void AeDeleteBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            new AnneeExerciceControl().Delete(this.anneeExercice.codeAE);
+            Refresh();
         }
 
         private void AeUpdateBtn_Click(object sender, RoutedEventArgs e)
@@ -63,7 +64,6 @@ namespace GestionStock.View
             AnneeExercice anneeExercice = new AnneeExercice(aeDate.SelectedDate.Value.ToString("yyyy-MM-dd"));
             anneeExercice.codeAE = this.anneeExercice.codeAE;
             new AnneeExerciceControl().Update(anneeExercice);
-            // gridAE_Initialized(sender, e);
             Refresh();
         }
 

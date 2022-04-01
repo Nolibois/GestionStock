@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GestionStock.Controller;
+using GestionStock.Model;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using GestionStock.Model;
-using GestionStock.Controller;
 
 namespace GestionStock.View
 {
@@ -30,6 +20,10 @@ namespace GestionStock.View
             grid_Init();
         }
 
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
         private void ajouter_Click(object sender, RoutedEventArgs e)
         {
@@ -62,9 +56,15 @@ namespace GestionStock.View
             grid_Init();
         }
 
-        private void grid_Init() {
+        private void grid_Init()
+        {
             FournisseurControl controller = new FournisseurControl();
             grid.ItemsSource = controller.Show();
+        }
+
+        private void Grille_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

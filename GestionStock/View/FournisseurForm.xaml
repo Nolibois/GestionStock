@@ -50,13 +50,13 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btn_annuler" Content="Annuler" HorizontalAlignment="Left" Margin="671,364,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="54" Padding="3,3,3,3" Height="22">
+        <Button x:Name="CancelBtn_Frs" Content="Annuler" HorizontalAlignment="Left" Margin="671,364,0,0" VerticalAlignment="Top" Background="#FF41DA5F" Width="54" Padding="3,3,3,3" Height="22" Click="CancelBtn_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="856,121,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="358,41,0,240" Initialized="grid_Initialized">
+        <DataGrid x:Name="grid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="358,41,0,240" Initialized="grid_Initialized" Grid.Row="1" IsSynchronizedWithCurrentItem="True" SelectionChanged="Grille_SelectionChanged" Grid.Column="1">
             <DataGrid.DataContext>
                 <Model:Fournisseurs/>
             </DataGrid.DataContext>

@@ -47,7 +47,7 @@ namespace GestionStock.View
                 email.Text,
                 remarques.Text);
 
-           controller.Ajouter(fournisseur);
+            controller.Ajouter(fournisseur);
 
             grid_Initialized(sender, e);
         }

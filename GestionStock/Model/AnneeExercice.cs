@@ -12,7 +12,7 @@ namespace GestionStock.Model
     {
         public int codeAE { get; set; }
 
-        public String anneeExercice { get; set; }
+        public string anneeExercice { get; set; }
 
         public AnneeExercice() { }
 
@@ -28,10 +28,9 @@ namespace GestionStock.Model
             return this;
         }
 
-        public AnneeExercice Update()
+        public AnneeExercice Edit()
         {
-            string query = "UPDATE AnneeExercice SET AnneeExercice= '" + this.anneeExercice + "' where codeAE='" + this.codeAE + "'";
-
+            string query = "UPDATE AnneeExercice SET AnneeExercice= '" + this.anneeExercice + "' WHERE CodeAE='" + this.codeAE + "'";
             DatabaseContext.Exec(query);
             return this;
         }

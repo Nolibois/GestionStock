@@ -22,6 +22,7 @@ namespace GestionStock.View
     public partial class AnneeExerciceForm : Window
     {
         private AnneeExerciceControl controllerAE;
+        private AnneeExercice anneeExercice;
 
         public AnneeExerciceForm()
         {
@@ -43,7 +44,8 @@ namespace GestionStock.View
         private void addbtn_Click_1(object sender, RoutedEventArgs e)
         {
             controllerAE.Add(new AnneeExercice(aeDate.SelectedDate.Value.ToString("yyyy-MM-dd")));
-            gridAE_Initialized(sender, e);
+            //gridAE_Initialized(sender, e);
+           Refresh();
         }
 
         private void gridAE_Initialized(object sender, EventArgs e)
@@ -58,7 +60,21 @@ namespace GestionStock.View
 
         private void AeUpdateBtn_Click(object sender, RoutedEventArgs e)
         {
+            AnneeExercice anneeExercice = new AnneeExercice(aeDate.SelectedDate.Value.ToString("yyyy-MM-dd"));
+            anneeExercice.codeAE = this.anneeExercice.codeAE;
+            new AnneeExerciceControl().Update(anneeExercice);
+            // gridAE_Initialized(sender, e);
+            Refresh();
+        }
 
+        private void gridAE_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.anneeExercice = (AnneeExercice)gridAE.SelectedItem;
+
+            if (this.anneeExercice != null)
+            {
+                aeDate.SelectedDate = DateTime.Parse(this.anneeExercice.anneeExercice);
+            }
         }
     }
 }

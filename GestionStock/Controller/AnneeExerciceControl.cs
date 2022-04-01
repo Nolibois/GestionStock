@@ -21,6 +21,11 @@ namespace GestionStock.Controller
             return aE.Insert();
         }
 
+        public AnneeExercice Update(AnneeExercice aE)
+        {
+            return aE.Edit();
+        }
+
         public bool Delete(int id)
         {
             return anneeE.Delete(id);

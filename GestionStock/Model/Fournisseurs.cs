@@ -112,7 +112,8 @@ namespace GestionStock.Model
                    "Telephone           = '" + fournisseur.telephone + "'," +
                    "ConditionPaiement   = '" + fournisseur.conditionPaiement + "'," +
                    "Email               = '" + fournisseur.email + "'," +
-                   "Remarques           = '" + fournisseur.remarques + "'";
+                   "Remarques           = '" + fournisseur.remarques + "'," +
+                "WHERE RefFournisseur   = '" + fournisseur.refFournisseur + "'";
 
             DatabaseContext.Exec(query);
 

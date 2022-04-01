@@ -31,7 +31,7 @@ namespace GestionStock.Controller
         
         public Fournisseurs Edit(Fournisseurs fournisseur)
         {
-            return new Fournisseurs();
+            return fournisseur.Edit(fournisseur);
         }
 
         public bool Delete(Fournisseurs fournuisseur)
